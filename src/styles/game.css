@@ -1,0 +1,235 @@
+html,
+body {
+  background: black;
+}
+
+.my-app {
+  position: relative;
+}
+.my-app .loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.my-app .loader .loader-spinner {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  background-color: #5f79d7;
+  animation: spin 2.5s infinite linear;
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.my-app .splash-wrapper {
+  position: relative;
+  height: 100vh;
+}
+.my-app .splash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1600px;
+  height: 900px;
+  background: url("../../public/images/splash-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.my-app .splash .splash__title {
+  width: 500px;
+}
+.my-app .splash .splash__title img {
+  display: block;
+  width: 100%;
+}
+.my-app .splash .splash__content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+  padding: 50px 80px;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  -webkit-clip-path: polygon(0 50px, 50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%);
+          clip-path: polygon(0 50px, 50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%);
+}
+.my-app .splash .splash__content .game-rules__title {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: gold;
+}
+.my-app .splash .splash__content .game-rules__item {
+  margin-top: 35px;
+}
+.my-app .splash .splash__content .game-rules__item-text {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.my-app .splash .splash__content .game-rules__item-img-wrap {
+  width: 300px;
+}
+.my-app .splash .splash__content .game-rules__item-img-wrap.elixir-tracker {
+  width: 400px;
+}
+.my-app .splash .splash__content .game-rules__item-img-wrap.bomb {
+  width: 50px;
+}
+.my-app .splash .splash__content .game-rules__item-img-wrap.arrows {
+  width: 200px;
+}
+.my-app .splash .splash__content .game-rules__item-img-wrap img {
+  display: block;
+  width: 100%;
+}
+.my-app .splash .splash-btn {
+  width: 200px;
+  padding: 10px;
+  margin-top: 35px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, rgba(120, 9, 121, 0.8) 35%, rgba(68, 0, 255, 0.8) 100%);
+  color: #fff;
+  -webkit-clip-path: polygon(0 15px, 15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+          clip-path: polygon(0 15px, 15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+  animation: bounce 0.35s infinite alternate;
+  transform-origin: center center;
+  cursor: pointer;
+}
+.my-app .splash .splash-btn:hover {
+  animation: none;
+}
+@keyframes bounce {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.game .canvas {
+  background-color: black;
+}
+.game .wrapper {
+  position: relative;
+  width: 1600px;
+  height: 900px;
+}
+.game .score-jar {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  display: flex;
+  width: 500px;
+  height: 58px;
+  background-image: url("../../public/images/m-bar.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.game .score-jar .score-wrapper {
+  position: absolute;
+  top: 12.2px;
+  left: 20px;
+  display: flex;
+  width: 458px;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.3490196078);
+  -webkit-clip-path: polygon(12px 0, 447px 0, 100% 12.5px, 446px 100%, 13px 91%, 0 12.5px);
+          clip-path: polygon(12px 0, 447px 0, 100% 12.5px, 446px 100%, 13px 91%, 0 12.5px);
+}
+.game .score-jar .score {
+  height: 100%;
+  transition: width 0.5s;
+}
+.game .replay-screen,
+.game .cong-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+.game .replay-screen.show,
+.game .cong-screen.show {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.5s 1s;
+}
+.game .replay-screen .replay-btn,
+.game .cong-screen .replay-btn {
+  outline: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.game .replay-screen .replay-btn:hover,
+.game .cong-screen .replay-btn:hover {
+  transform: scale(1.2);
+}
+.game .cong-screen {
+  flex-direction: column;
+}
+.game .cong-screen:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/images/confetti.svg");
+  background-size: contain;
+  pointer-events: none;
+}
+.game .cong-screen .cong-label {
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}/*# sourceMappingURL=game.css.map */
