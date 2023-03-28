@@ -26,5 +26,4 @@ Thanks to <a href="https://www.youtube.com/watch?v=4q2vvZn5aoo&t=2494s" target="
 ## Play now
 ```
 https://mario-sidescroller.netlify.app/
-
 ```
