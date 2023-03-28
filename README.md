@@ -15,3 +15,11 @@ Thanks to <a href="https://www.youtube.com/watch?v=4q2vvZn5aoo&t=2494s" target="
 
 
 **<sub>Note: the character used in the game is from one of the tutorials from <a href="https://www.youtube.com/watch?v=4q2vvZn5aoo&t=2494s" target="_blank">Chris Courses</a>.</sub>**
+
+
+## Screenshots
+![Image](https://raw.githubusercontent.com/salman9699/mario-react/main/Screenshots/SS-1.png)
+![Image](https://raw.githubusercontent.com/salman9699/mario-react/main/Screenshots/SS-2.png)
+![Image](https://raw.githubusercontent.com/salman9699/mario-react/main/Screenshots/SS-3.png)
+![Image](https://raw.githubusercontent.com/salman9699/mario-react/main/Screenshots/SS-4.png)
+
