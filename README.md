@@ -23,3 +23,8 @@ Thanks to <a href="https://www.youtube.com/watch?v=4q2vvZn5aoo&t=2494s" target="
 ![Image](https://raw.githubusercontent.com/salman9699/mario-react/main/Screenshots/SS-3.png)
 ![Image](https://raw.githubusercontent.com/salman9699/mario-react/main/Screenshots/SS-4.png)
 
+## Play now
+```
+https://mario-sidescroller.netlify.app/
+
+```
